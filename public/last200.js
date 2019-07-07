@@ -3,18 +3,18 @@
   $("#numberbutton").click(function () {
     $("#numbersOutput").val('');
     var numbersResult = '';
+    var subjectNr = $('#subjects input:radio:checked').val();
     var theSelectedNumber = parseInt($("#inputnumber").val());
-    console.log(theSelectedNumber);
     if (!isNaN(theSelectedNumber)) {
         //alert("The number chosen : " + theSelectedNumber)
-
+        var theSelectedNumber = theSelectedNumber - 200;
         for(var i = 0; i <= 200; i++){
 
           var num = theSelectedNumber + i;
           if(i === 200){
-            numbersResult += num;
+            numbersResult += subjectNr + num;
           }else{
-            numbersResult += num + ", ";
+            numbersResult += subjectNr + num + ", ";
           }
         }
         console.log(numbersResult);
