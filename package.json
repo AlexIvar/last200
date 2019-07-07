@@ -1,0 +1,26 @@
+{
+  "name": "javascriptprojects",
+  "version": "1.0.0",
+  "description": "this is a website made to get the last 200 bgs questions",
+  "main": "last200.js",
+  "dependencies": {
+    "latest": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexIvar/last200.git"
+  },
+  "keywords": [
+    "last200"
+  ],
+  "author": "alexivar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexIvar/last200/issues"
+  },
+  "homepage": "https://github.com/AlexIvar/last200#readme"
+}
