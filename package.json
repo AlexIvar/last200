@@ -4,13 +4,14 @@
   "description": "this is a website made to get the last 200 bgs questions",
   "main": "last200.js",
   "dependencies": {
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
     "latest": "^0.2.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node last200.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
