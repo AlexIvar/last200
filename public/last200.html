@@ -15,7 +15,7 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Welcome</h1>
-        <code style="color: black">Enter a number and press GO! It will give you the next 200 numbers seperated with commas!</code>
+        <code style="color: black">Enter the total number of questions for the selected subject and press GO! </br> It will give you the last 200 questions seperated with commas!</code>
       </div>
     </div>
     <div class="container">
@@ -23,15 +23,18 @@
         <div class="form-group">
           <label>Select subject<lablel>
               <div class="input-group mb-3">
-          <div class="btn-group btn-group-toggle" id="subjects" data-toggle="buttons">
+          <div class="btn-group btn-group-toggle flex-wrap" id="subjects" data-toggle="buttons">
           <label class="btn btn-primary active">
             <input type="radio" name="options" id="POF" value="81" autocomplete="off" checked> POF
           </label>
           <label class="btn btn-primary">
-            <input type="radio" name="options" id="AGK" value="111" autocomplete="off"> AGK
+            <input type="radio" name="options" id="AGK" value="21" autocomplete="off"> AGK
           </label>
           <label class="btn btn-primary">
-            <input type="radio" name="options" id="RNAV" value="222" autocomplete="off"> RNAV
+            <input type="radio" name="options" id="RNAV" value="62" autocomplete="off"> RNAV
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="FP" value="33" autocomplete="off"> RNAV
           </label>
           <label class="btn btn-primary">
             <input type="radio" name="options" id="INST" value="333" autocomplete="off"> INST
@@ -61,14 +64,14 @@
             <input type="radio" name="options" id="HPL" value="111" autocomplete="off"> HPL
           </label>
           <label class="btn btn-primary">
-            <input type="radio" name="options" id="AIRLAW" value="222" autocomplete="off"> AIRLAW
+            <input type="radio" name="options" id="AIRLAW" value="10" autocomplete="off"> AIRLAW
           </label>
         </div>
       </div>
         </div>
 
         <div class="form-group">
-          <label for="exampleFormControlInput1">Enter total number of numbers for the subject</label>
+          <label for="exampleFormControlInput1">Enter total number of questions for the subject</label>
 
           <div class="input-group mb-3">
             <input type="text" id="inputnumber" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">

@@ -3,18 +3,20 @@
   $("#numberbutton").click(function () {
     $("#numbersOutput").val('');
     var numbersResult = '';
-    var subjectNr = $('#subjects input:radio:checked').val();
+    var subjectNr = $('#subjects input:checked').val();
     var theSelectedNumber = parseInt($("#inputnumber").val());
-    if (!isNaN(theSelectedNumber)) {
+    if (!isNaN(theSelectedNumber) && theSelectedNumber > 200) {
         //alert("The number chosen : " + theSelectedNumber)
+        console.log(theSelectedNumber < 200);
         var theSelectedNumber = theSelectedNumber - 200;
         for(var i = 0; i <= 200; i++){
 
           var num = theSelectedNumber + i;
+
           if(i === 200){
-            numbersResult += subjectNr + num;
+            numbersResult += ((num < 1000) ? subjectNr + '0' : subjectNr) + num;
           }else{
-            numbersResult += subjectNr + num + ", ";
+            numbersResult += ((num < 1000) ? subjectNr + '0' : subjectNr) + num + ", ";
           }
         }
         console.log(numbersResult);
@@ -22,7 +24,7 @@
         return;
     }
     else {
-        alert("no number has been chosen!")
+        alert("You have to choose a number bigger than 200!")
     }
 });
 
@@ -47,7 +49,7 @@ function copyTheNumbers() {
    setTimeout(function () {
         $("#copyButton").tooltip('dispose');
     }, 2000)
-  /* Alert the copied text */
-  //alert("Copied the text: " + copyText.value);
+
+     $('#numbersOutput').trigger('blur');
 
 }
