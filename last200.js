@@ -1,4 +1,6 @@
-
+var jsdom = require('jsdom');
+$ = require('jquery')(new jsdom.JSDOM().window);
+  //your code here
   $("#numberbutton").click(function () {
     $("#numbersOutput").val('');
     var numbersResult = '';
