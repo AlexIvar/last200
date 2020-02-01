@@ -8,11 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="last200.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 
     <title>last200!</title>
   </head>
   <body>
-    <div class="container">
+  <!--  <div class="container">
       <div class="jumbotron">
         <h1>Welcome</h1>
         <code style="color: black">Enter the total number of questions for the selected subject and press GO! </br> It will give you the last 200 questions seperated with commas!</code>
@@ -81,9 +82,91 @@
           <button type="button" id="copyButton" data-toggle="tooltip" data-placement="top" title="Text copied!" class="btn btn-primary btn-sm float-right">copy text</button>
         </div>
 </form>
-    </div>
+</div>-->
 
-    <!-- Optional JavaScript -->
+    <div class="container" id="yolo">
+    <img style="position:absolute" src='mass.png'>
+    <div id='empty_leverarm' style="position:absolute; top:140px; left:350px"></div>
+    <div id='empty_mass' style="position:absolute; top:140px; left:520px"></div>
+    <div id='empty_moment' style="position:absolute; top:140px; left:680px"></div>
+
+    <div id='frontseats_mass' style="position:absolute; top:183px; left:520px"></div>
+    <div id='frontseats_moment' style="position:absolute; top:183px; left:680px"></div>
+
+    <div id='rearseats_mass' style="position:absolute; top:225px; left:520px"></div>
+    <div id='rearseats_moment' style="position:absolute; top:225px; left:680px"></div>
+
+    <div id='stdbaggage_mass' style="position:absolute; top:270px; left:520px"></div>
+    <div id='stdbaggage_moment' style="position:absolute; top:270px; left:680px"></div>
+
+    <div id='baggagetube_mass' style="position:absolute; top:325px; left:520px"></div>
+    <div id='baggagetube_moment' style="position:absolute; top:325px; left:680px"></div>
+
+    <div id='shortbaggage_mass' style="position:absolute; top:400px; left:520px"></div>
+    <div id='shortbaggage_moment' style="position:absolute; top:400px; left:680px"></div>
+
+    <div id='fwdbaggage_mass' style="position:absolute; top:500px; left:520px"></div>
+    <div id='fwdbaggage_moment' style="position:absolute; top:500px; left:680px"></div>
+
+    <div id='aftbaggage_mass' style="position:absolute; top:600px; left:520px"></div>
+    <div id='aftbaggage_moment' style="position:absolute; top:600px; left:680px"></div>
+
+    <div id='zfm_leverarm' style="position:absolute; top:685px; left:350px"></div>
+    <div id='zfm_mass' style="position:absolute; top:685px; left:520px"></div>
+    <div id='zfm_moment' style="position:absolute; top:685px; left:680px"></div>
+
+    <div id='fuel_mass' style="position:absolute; top:745px; left:520px"></div>
+    <div id='fuel_moment' style="position:absolute; top:745px; left:680px"></div>
+
+    <div id='tom_leverarm' style="position:absolute; top:815px; left:350px"></div>
+    <div id='tom_mass' style="position:absolute; top:815px; left:515px"></div>
+    <div id='tom_moment' style="position:absolute; top:815px; left:680px"></div>
+
+    <div id='fuelburn_mass' style="position:absolute; top:863px; left:520px"></div>
+    <div id='fuelburn_moment' style="position:absolute; top:863px; left:680px"></div>
+
+    <div id='lm_leverarm' style="position:absolute; top:910px; left:350px"></div>
+    <div id='lm_mass' style="position:absolute; top:915px; left:515px"></div>
+    <div id='lm_moment' style="position:absolute; top:915px; left:680px"></div>
+
+    <div id='zfm_leverarm2' style="position:absolute; top:1000px; left:510px"></div>
+    <div id='tom_leverarm2' style="position:absolute; top:1030px; left:510px"></div>
+    <div id='lm_leverarm2' style="position:absolute; top:1060px; left:510px"></div>
+  </div>
+
+
+  <div class="theForm">
+    <form >
+      <label for="fname">Mass</label>
+      <input type="text" id="mass">
+
+      <label for="lname">Moment</label>
+      <input type="text" id="moment">
+
+      <label for="lname">Front seat 1</label>
+      <input type="text" id="frontSeat1">
+
+      <label for="lname">Front seat 2</label>
+      <input type="text" id="frontSeat2">
+
+      <label for="lname">Back seats</label>
+      <input type="text" id="backSeats">
+
+      <label for="lname">Std baggage</label>
+      <input type="text" id="baggage">
+
+      <label for="lname">Fuel</label>
+      <input type="text" id="fuel">
+
+      <label for="lname">Fuel burn</label>
+      <input type="text" id="fuelburn">
+
+      <input type="button" value="Submit"onclick="myFunction()" />
+    </form>
+  </div>
+
+
+	  <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
