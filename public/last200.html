@@ -86,6 +86,8 @@
 
     <div class="container" id="yolo">
     <img style="position:absolute" src='mass.png'>
+    <div id='aircraftNumber' style="position:absolute; top:8px; left:120px"></div>
+    <div id='mtom' style="position:absolute; top:8px; left:350px"></div>
     <div id='empty_leverarm' style="position:absolute; top:140px; left:350px"></div>
     <div id='empty_mass' style="position:absolute; top:140px; left:520px"></div>
     <div id='empty_moment' style="position:absolute; top:140px; left:680px"></div>
@@ -137,18 +139,36 @@
 
   <div class="theForm">
     <form >
-      <label for="fname">Mass</label>
+
+      <label for="lname">Aircraft</label>
+        <select name="lname" id="aircraft">
+        <option value="C">G-CTSC</option>
+        <option value="D">G-CTSD</option>
+        <option value="E">G-CTSE</option>
+        <option value="G">G-CTSG</option>
+        <option value="H">G-CTSH</option>
+        <option value="J">G-CTSJ</option>
+        <option value="K">G-CTSK</option>
+        <option value="M">G-CTSM</option>
+        <option value="N">G-CTSN</option>
+        <option value="O">G-CTSO</option>
+        <option value="P">G-CTSP</option>
+        <option value="R">G-CTSR</option>
+        <option value="T">G-CTST</option>
+    </select>
+
+      <!--<label for="fname">Mass</label>
       <input type="text" id="mass">
 
       <label for="lname">Moment</label>
-      <input type="text" id="moment">
+      <input type="text" id="moment">-->
 
       <label for="lname">Front seat 1</label>
       <input type="text" id="frontSeat1">
 
       <!--<label for="lname">Front seat 2</label>
       <input type="text" id="frontSeat2">-->
-        <label for="lname">Front seat 2</label>
+      <label for="lname">Front seat 2</label>
         <select name="lname" id="frontSeat2">
         <option value="0">Empty</option>
         <option value="80">Mohammad Jumaa Shehadeh</option>

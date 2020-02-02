@@ -1,5 +1,7 @@
 
   //your code here
+  document.getElementById('aircraftNumber').innerHTML = ""
+  document.getElementById('mtom').innerHTML = ""
   document.getElementById('empty_leverarm').innerHTML = ""
   document.getElementById('empty_mass').innerHTML = ""
   document.getElementById('empty_moment').innerHTML = ""
@@ -33,16 +35,35 @@
   document.getElementById('lm_mass').innerHTML = ""
   document.getElementById('lm_moment').innerHTML = ""
 
+  var aircraftlist = [
+    { value: 'C', mass: '958', moment: 2377, mtom: 1310 },
+    { value: 'D', mass: '954', moment: 2365, mtom: 1310 },
+    { value: 'E', mass: '962', moment: 2393, mtom: 1280 },
+    { value: 'G', mass: '955', moment: 2367, mtom: 1280 },
+    { value: 'H', mass: '958', moment: 2378, mtom: 1310 },
+    { value: 'J', mass: '959', moment: 2378, mtom: 1310 },
+    { value: 'K', mass: '955', moment: 2368, mtom: 1280 },
+    { value: 'M', mass: '963', moment: 2379, mtom: 1310 },
+    { value: 'N', mass: '959', moment: 2379, mtom: 1310 },
+    { value: 'O', mass: '957', moment: 2371, mtom: 1310 },
+    { value: 'P', mass: '958', moment: 2393, mtom: 1310 },
+    { value: 'R', mass: '958', moment: 2390, mtom: 1310 },
+    { value: 'T', mass: '950', moment: 2377, mtom: 1310 }
+];
+
 function myFunction(){
-  var mass = document.getElementById("mass").value;
-  var moment = document.getElementById("moment").value;
+  var aplane = aircraftlist.find(x => x.value === document.getElementById("aircraft").value);
+  var mass = aplane.mass;
+  var moment = aplane.moment;
+  var mtom = aplane.mtom;
+  var aircraftnumber = 'G-CTS' + aplane.value;
   var frontSeat1 = document.getElementById("frontSeat1").value;
   var frontSeat2 = document.getElementById("frontSeat2").value;
   var backSeats = document.getElementById("backSeats").value;
   var baggage = document.getElementById("baggage").value;
   var fuel = document.getElementById("fuel").value;
   var fuelburn = document.getElementById("fuelburn").value;
-  var emptyleverarm = roundToTwo(moment/mass);
+  var emptyleverarm = roundToTwoTwo(moment/mass);
   var frontseatmass = roundToTwo(+frontSeat1 + +frontSeat2);
   var fronseatmoment = roundToTwo(frontseatmass * 2.3);
   var backseatmoment = roundToTwo(3.25 * backSeats);
@@ -61,6 +82,9 @@ function myFunction(){
   var lmMoment = roundToTwo(tomMoment - fuelburnmoment);
   var lmLeverarm = lmMoment / lmMass;
 
+  document.getElementById('aircraftNumber').innerHTML = aircraftnumber;
+  console.log(aircraftnumber)
+  document.getElementById('mtom').innerHTML = 'MTOM: ' + mtom + ' kg';
   document.getElementById('empty_leverarm').innerHTML = emptyleverarm;
   document.getElementById('empty_mass').innerHTML = mass;
   document.getElementById('empty_moment').innerHTML = moment;
