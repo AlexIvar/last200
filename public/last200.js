@@ -43,18 +43,17 @@ function myFunction(){
   var fuel = document.getElementById("fuel").value;
   var fuelburn = document.getElementById("fuelburn").value;
   var emptyleverarm = roundToTwo(moment/mass);
-  var frontseatmass = +frontSeat1 + +frontSeat2;
-  console.log(frontseatmass);
+  var frontseatmass = roundToTwo(+frontSeat1 + +frontSeat2);
   var fronseatmoment = roundToTwo(frontseatmass * 2.3);
   var backseatmoment = roundToTwo(3.25 * backSeats);
   var baggagemoment = roundToTwo(3.65 * baggage);
-  var zfmMass = +mass + +frontseatmass + +backSeats + +baggage;
-  var zfmMoment = +moment + +fronseatmoment + +backseatmoment + +baggagemoment;
+  var zfmMass = roundToTwo(+mass + +frontseatmass + +backSeats + +baggage);
+  var zfmMoment = roundToTwo(+moment + +fronseatmoment + +backseatmoment + +baggagemoment);
   var zfmleverarm = roundToTwo(zfmMoment / zfmMass);
   var fuelmass = roundToTwo(fuel * 3.03);
   var fuelmoment = roundToTwo(fuelmass * 2.63);
-  var tomMass = +zfmMass + +fuelmass;
-  var tomMoment = +zfmMoment + +fuelmoment;
+  var tomMass = roundToTwo(+zfmMass + +fuelmass);
+  var tomMoment = roundToTwo(+zfmMoment + +fuelmoment);
   var tomLeverarm = roundToTwo(tomMoment / tomMass);
   var fuelburnmass = roundToTwo(3.03 * fuelburn);
   var fuelburnmoment = roundToTwo(fuelburnmass * 2.63);
@@ -69,7 +68,7 @@ function myFunction(){
   document.getElementById('frontseats_mass').innerHTML = frontseatmass;
   document.getElementById('frontseats_moment').innerHTML = fronseatmoment;
   document.getElementById('rearseats_mass').innerHTML = ((backSeats == '0' || backSeats == '') ? '-' : backSeats);
-  document.getElementById('rearseats_moment').innerHTML = backseatmoment;
+  document.getElementById('rearseats_moment').innerHTML = ((backseatmoment == '0' || backseatmoment == '') ? '-' : backseatmoment);
   document.getElementById('stdbaggage_mass').innerHTML = baggage;
   document.getElementById('stdbaggage_moment').innerHTML = baggagemoment;
 
@@ -147,5 +146,5 @@ function copyTheNumbers() {
 }
 
 function roundToTwo(num) {
-    return +(Math.round(num + "e+2")  + "e-2");
+    return +(Math.round(num + "e+3")  + "e-3");
 }
