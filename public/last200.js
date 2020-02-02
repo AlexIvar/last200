@@ -49,17 +49,17 @@ function myFunction(){
   var baggagemoment = roundToTwo(3.65 * baggage);
   var zfmMass = roundToTwo(+mass + +frontseatmass + +backSeats + +baggage);
   var zfmMoment = roundToTwo(+moment + +fronseatmoment + +backseatmoment + +baggagemoment);
-  var zfmleverarm = roundToTwo(zfmMoment / zfmMass);
+  var zfmleverarm = zfmMoment / zfmMass;
   var fuelmass = roundToTwo(fuel * 3.03);
   var fuelmoment = roundToTwo(fuelmass * 2.63);
   var tomMass = roundToTwo(+zfmMass + +fuelmass);
   var tomMoment = roundToTwo(+zfmMoment + +fuelmoment);
-  var tomLeverarm = roundToTwo(tomMoment / tomMass);
+  var tomLeverarm = tomMoment / tomMass;
   var fuelburnmass = roundToTwo(3.03 * fuelburn);
   var fuelburnmoment = roundToTwo(fuelburnmass * 2.63);
   var lmMass = roundToTwo(tomMass - fuelburnmass);
   var lmMoment = roundToTwo(tomMoment - fuelburnmoment);
-  var lmLeverarm = roundToTwo(lmMoment / lmMass);
+  var lmLeverarm = lmMoment / lmMass;
 
   document.getElementById('empty_leverarm').innerHTML = emptyleverarm;
   document.getElementById('empty_mass').innerHTML = mass;
@@ -72,20 +72,20 @@ function myFunction(){
   document.getElementById('stdbaggage_mass').innerHTML = baggage;
   document.getElementById('stdbaggage_moment').innerHTML = baggagemoment;
 
-  document.getElementById('zfm_leverarm').innerHTML = zfmleverarm;
-  document.getElementById('zfm_leverarm2').innerHTML = zfmleverarm;
+  document.getElementById('zfm_leverarm').innerHTML = roundToTwoTwo(zfmleverarm);
+  document.getElementById('zfm_leverarm2').innerHTML = roundToThree(zfmleverarm);
   document.getElementById('zfm_mass').innerHTML = zfmMass;
   document.getElementById('zfm_moment').innerHTML = zfmMoment;
   document.getElementById('fuel_mass').innerHTML = fuelmass;
   document.getElementById('fuel_moment').innerHTML = fuelmoment;
-  document.getElementById('tom_leverarm').innerHTML = tomLeverarm;
-  document.getElementById('tom_leverarm2').innerHTML = tomLeverarm;
+  document.getElementById('tom_leverarm').innerHTML = roundToTwoTwo(tomLeverarm);
+  document.getElementById('tom_leverarm2').innerHTML = roundToThree(tomLeverarm);
   document.getElementById('tom_mass').innerHTML = tomMass;
   document.getElementById('tom_moment').innerHTML = tomMoment;
   document.getElementById('fuelburn_mass').innerHTML = fuelburnmass;
   document.getElementById('fuelburn_moment').innerHTML = fuelburnmoment;
-  document.getElementById('lm_leverarm').innerHTML = lmLeverarm;
-  document.getElementById('lm_leverarm2').innerHTML = lmLeverarm;
+  document.getElementById('lm_leverarm').innerHTML = roundToTwoTwo(lmLeverarm);
+  document.getElementById('lm_leverarm2').innerHTML = roundToThree(lmLeverarm);
   document.getElementById('lm_mass').innerHTML = lmMass;
   document.getElementById('lm_moment').innerHTML = lmMoment;
 
@@ -146,5 +146,13 @@ function copyTheNumbers() {
 }
 
 function roundToTwo(num) {
+    return +(Math.round(num + "e+1")  + "e-1");
+}
+
+function roundToTwoTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");
+}
+
+function roundToThree(num) {
     return +(Math.round(num + "e+3")  + "e-3");
 }
