@@ -4,7 +4,7 @@
   "description": "this is a website made to get the last 200 bgs questions",
   "main": "last200.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
     "latest": "^0.2.0"
